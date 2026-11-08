@@ -2,27 +2,22 @@
 Save path: C:/MarvelApps/familyhub/README.md
 
 Live (once pushed): https://smarvel1963-ops.github.io/familyhub/ - app #9 of the Marvel Corp Hub family (Scott 2026-10-25,
-plan: C:/MarvelDesktop/docs/FAMILY_HUB_PLAN_FROM_OUTSIDE_CHAT_2026-10-25.md).
+plan: C:/MarvelDesktop/docs/FAMILY_HUB_PLAN_FROM_OUTSIDE_CHAT_2026-10-25.md; 11/07 boards + "these are CORE" + "Phase B: all phones").
 
-This repo is Family Hub's OWN shell: index.html, manifest.json, icons, sw.js and privacy.html. The app itself is the
-shared Hub engine in the Day Hub repo, run with window.DH_MODE = "family" plus family.js.
+This repo is Family Hub's OWN shell: index.html, manifest.json, icons, art/, sw.js and privacy.html. The app itself is the shared Hub
+engine in the Day Hub repo, run with window.DH_MODE = "family" plus family.js, familymsg.js, familytree.js, familyphotos.js,
+familylife.js, familysync.js and family.css (Family's look, loaded only here).
 
-- Own data on the phone (familyhub.v1).
-- v1 (engine 1.59), the notes' V1 "Foundation" on one phone:
-  - Family Orbit home
-  - color-coded calendar with repeats and "adults only" events
-  - chores with parent OKs, stars and allowances (pay-outs logged)
-  - shopping lists and the family to-do board
-  - emergency card, birthdays, Grandparent Mode
-  - "Who's using this phone?" with a parent PIN
-- Roles (owner / adult / child / guest) are checked by `fhCan()` in family.js for every screen and every action.
-  - Kids are profiles a parent manages: no kid logins, no kid emails, no location, no medical records.
-- Sharing between phones = the FAMILY_SYNC switch in ../dayhub/features.js, OFF.
-  - It is planned on Firebase's free Spark plan (Scott 10/25 "A").
-  - privacy.html must describe exactly what it sends BEFORE it is turned on.
-- Icons come from the Hub series concept logo (../dayhub/brand/hub_series_20_logos_2026-10-11/family_hub_logo.png, 256 px, scaled up).
-- Release order matters. Push this repo first. Then, in the Day Hub repo:
-  - drop `soon: true` from the familyhub row in ui.js HUBS;
-  - add the UNI_HUBS row in universe.js and take Family Hub off UNI_SOON;
-  - add `../dayhub/family.js` to hubuniverse/index.html (before universe.js).
-- Tests + release steps: the Day Hub repo (python tests/run_tests.py).
+- Own data on the phone (familyhub.v1); photos, profile photos and document pictures in IndexedDB (familyhub.photos).
+- Phase A (engine 1.59): Scott's board 1 look; tabs Today | Messages | Calendar | Family | More; messages and check-ins; Month / Week /
+  Today calendar with reminders; family tree, profiles and "who sees what"; photos and memories; meals, school, documents, pets, goals,
+  trips; chores and allowances; lists; emergency card; Grandparent Mode; the 30-day trial clock ($25 once after - Scott 11/07).
+- Phase B: sharing between phones on Firebase (project day-hub-510322, Spark): ../dayhub/familysync.js. Rules:
+  C:/MarvelApps/docs/hub_improvement/familyhub/firestore.rules (published 11/07, tested first: rules_test/).
+- Roles (owner / adult / child / guest): fhCan() in family.js; who sees what: fhAudOk / fhSees. Kids are profiles a parent manages:
+  no kid logins, no location, no medical records.
+- art/: made on OpenArt for this look (no text, people, faces, logos or real places); masters on D:\MarvelBackups\art\familyhub_2026-11-07,
+  cut by C:/MarvelApps/docs/hub_improvement/make_hub_art.py familyhub.
+- Release order: push THIS repo first (and turn on GitHub Pages), then the Day Hub repo, then Hub Universe.
+- Tests: the Day Hub repo (python tests/run_tests.py, tests/test_family_v2.py, tests/test_family_sync.py; on Firebase's emulator:
+  docs/hub_improvement/familyhub/rules_test/run_sync_emu.ps1).
