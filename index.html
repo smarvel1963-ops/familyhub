@@ -1,0 +1,74 @@
+<!doctype html>
+<!-- SAVE AS: index.html  ·  LOCATION: C:/MarvelApps/familyhub/index.html
+     FAMILY HUB - app #9 of the Hub family, its own app at smarvel1963-ops.github.io/familyhub/ (Scott 2026-10-25: "you could
+     start on family hub app" + Family_Hub_Project_Notes.pdf, saved as C:/MarvelDesktop/docs/FAMILY_HUB_PLAN_FROM_OUTSIDE_CHAT_2026-10-25.md).
+     Its own page, icons, install and offline worker; it runs the shared Hub engine in the Day Hub repo with DH_MODE = "family"
+     (+ family.js). Its own data (familyhub.v1), kept on this phone until sharing (FAMILY_SYNC, off) is turned on. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0f2f7a" id="themeColor">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Family Hub</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icon-180.png">
+  <link rel="icon" type="image/png" href="icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../dayhub/styles.css">
+  <link rel="stylesheet" href="../dayhub/family.css">
+</head>
+<body>
+  <header id="hero" class="hero"></header>
+
+  <main id="cards" class="cards"></main>
+
+  <button id="fab" class="fab" aria-label="Add something">+</button>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- quick add -->
+  <div id="qa" class="sheet hidden" role="dialog" aria-modal="true" aria-label="Add">
+    <div class="sheet-body">
+      <div class="grab"></div>
+      <div class="sheet-head"><h2>Add</h2><button class="icon-btn" data-close="qa" aria-label="Close">✕</button></div>
+      <div id="qaTypes" class="seg"></div>
+      <form id="qaForm" class="qa-form"></form>
+    </div>
+  </div>
+
+  <!-- settings -->
+  <div id="sheet" class="sheet hidden" role="dialog" aria-modal="true" aria-label="Settings">
+    <div class="sheet-body">
+      <div class="grab"></div>
+      <div class="sheet-head"><h2>Make it yours</h2><button class="icon-btn" data-close="sheet" aria-label="Close">✕</button></div>
+      <label class="field">Your first name <input id="setName" placeholder="e.g. Sam"></label>
+      <label class="field">Weather: city or ZIP code <input id="setCity" placeholder="e.g. Denver, CO  or  80202" inputmode="text"></label>
+      <label class="field">Profession
+        <select id="setPack"></select>
+      </label>
+      <h3>Cards — ▲▼ to move, switch to show or hide</h3>
+      <ul id="cardList" class="card-list"></ul>
+      <p class="fine"><b>Family Hub — a Marvel Corp app.</b> Its own app, and part of the hub family with Day Hub, Cruise Hub, Trip Hub, Home Hub, Auto Hub, Money Hub, Health Hub and Hub Universe. <b>No ads. Ever.</b> Everything you type stays on this phone unless you turn on backup. Kids are profiles a parent manages - no kid logins, no location. <span id="ver"></span></p>
+    </div>
+  </div>
+
+  <script>window.DH_MODE = "family";</script>
+  <script src="../dayhub/features.js"></script>
+  <script src="../dayhub/app.js"></script>
+  <script src="../dayhub/scenes.js"></script>
+  <script src="../dayhub/cruise.js"></script>
+  <script src="../dayhub/shell.js"></script>
+  <script src="../dayhub/trip.js"></script>
+  <script src="../dayhub/ships.js"></script>
+  <script src="../dayhub/family.js"></script>
+  <script src="../dayhub/familymsg.js"></script>
+  <script src="../dayhub/familytree.js"></script>
+  <script src="../dayhub/familyphotos.js"></script>
+  <script src="../dayhub/familylife.js"></script>
+  <script src="../dayhub/familysync.js"></script>
+  <script src="../dayhub/ui.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<!-- SAVE AS: privacy.html · LOCATION: C:/MarvelApps/familyhub/privacy.html
+     Family Hub privacy policy (app v1.59, 2026-10-25). Same structure as Health Hub's (C:/MarvelApps/healthhub/privacy.html).
+     Plain words; only claims the code actually backs (shared Hub engine in the Day Hub repo, DH_MODE "family" + family.js).
+     Update the date line whenever a data flow changes - in particular BEFORE sharing between phones (FAMILY_SYNC switch,
+     off; planned on Google Firebase) is ever turned on. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Family Hub Privacy</title>
+  <link rel="icon" type="image/png" href="icon-192.png">
+  <style>
+    :root { --bg: #0b1020; --fg: #e8ecf8; --dim: #9aa6c4; --accent: #ff8fab; --line: rgba(255,255,255,.12); }
+    @media (prefers-color-scheme: light) { :root { --bg: #f7f8fc; --fg: #141a2e; --dim: #4b5675; --accent: #b3124d; --line: rgba(0,0,0,.12); } }
+    body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    main { max-width: 720px; margin: 0 auto; padding: 28px 16px 60px; }
+    h1 { font-size: 28px; margin: 0 0 4px; } h2 { font-size: 19px; margin: 28px 0 6px; }
+    .dim { color: var(--dim); font-size: 14px; } a { color: var(--accent); }
+    .wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: 15px; } td, th { text-align: left; vertical-align: top; padding: 8px 6px; border-bottom: 1px solid var(--line); }
+    th { font-size: 13px; color: var(--dim); font-weight: 600; }
+  </style>
+</head>
+<body><main>
+  <h1>Family Hub privacy policy</h1>
+  <p class="dim">Family Hub is an app by Marvel Corp, part of the Hub family of apps. Last updated November 7, 2026.</p>
+
+  <h2>The short version</h2>
+  <p>What you put in Family Hub stays on your phone unless your family turns on sharing between phones (below). There are no Family Hub accounts. There are no ads, no ad trackers and no analytics in the app. Your family's information is never sold and never used for advertising. One optional AI feature sends some of it to an AI service to answer you - only when you use it - and it is listed below.</p>
+
+  <h2>What stays on your phone</h2>
+  <p>Everything you type: your family's name, each member's first name, the face and color you pick for them, their role (owner, adult, child, guest) and the birthday you enter; calendar events (what, when, who, where, notes, repeats); chores, who did them, the OKs and the stars and allowance amounts; pay-outs you log; shopping lists; the family to-do board; the emergency card (contacts and phone numbers, meeting place, plan, notes for a sitter, family doctor); the parent PIN; Grandparent Mode and other settings; family messages, check-ins, announcements and reactions; the family tree (relatives, who their parents and partners are, birth years, birthplaces, life facts, stories and heritage notes) and each person's profile; who each person lets see each part of their profile; the meal plan and recipes; homework, pickups and drop-offs; pets and their care; family goals. These are saved in your browser's storage on your phone. We cannot see them.</p>
+  <p>Photos, profile photos and pictures of documents (ID cards, insurance cards, school forms and the like) are kept in a separate store on your phone. They are never put in the backup and never sent anywhere. Each one shows only to the people its "Who sees it" setting allows on that phone.</p>
+  <p>The parent PIN is a kid lock for a shared phone or tablet, kept on that phone. It is not a password and does not protect your data from someone who has your unlocked phone.</p>
+  <p>If other Hub apps are on the same phone, they can show a short read-only summary from Family Hub (and Family Hub from them); that happens on the phone and nothing is sent to us.</p>
+  <p><b>Deleting:</b> ⚙ Settings → <b>Your data</b> → <b>Erase everything</b> deletes your Family Hub information on the phone (photos and document pictures included), signs the phone out of Google, tells Google to drop that sign-in, and forgets saved purchase emails and the AI passphrase for every Hub app on the phone. Removing one person: Family → Edit → Remove.</p>
+
+  <h2>Children</h2>
+  <p>Family Hub is used by parents and other adults to organize their family. Children do not sign up and do not have accounts, emails or passwords in Family Hub: a parent adds them as a profile (a first name, a face, a color and, if the parent chooses, a birthday). Family Hub does not collect anyone's location and does not keep medical records. A child can use Family Hub on a parent's phone or tablet in a child view that hides "adults only" items; going back to a parent's view asks for the parent PIN if one is set. We do not knowingly collect information directly from children under 13.</p>
+
+  <h2>What leaves your phone, and why</h2>
+  <div class="wrap"><table>
+    <tr><th>When</th><th>What is sent</th><th>To whom</th></tr>
+    <tr><td>Always (opening the app)</td><td>Normal web requests (your IP address, browser type)</td><td>GitHub Pages, which hosts the app, and Google Fonts, which supplies the lettering.</td></tr>
+    <tr><td>If you enter a city or ZIP for weather (optional, in ⚙)</td><td>The city or ZIP code you enter, then that place's map location</td><td>Open-Meteo (weather and place search). For US ZIP codes, also Zippopotam.us.</td></tr>
+    <tr><td>If you use 💡 Ask with the AI helper on</td><td>Your question, and the Family Hub information it needs to answer from: the family name, members' first names and roles, birthdays as month and day only, the next 14 days of the calendar that the person using the phone may see, today's chores and how they stand, the shopping lists and the open family to-do jobs, current announcements, the family tree's names and links (with birthplaces and heritage only where the person shares them), the week's dinner plan and recipe names, open homework, pickups, pet names and family goals. Each person's sharing choices apply. The emergency card, the parent PIN, photos, documents and the family's message conversations are never sent. Any to-dos, lists or bills you added elsewhere in the app are included too.</td><td>Our relay (a Google Apps Script run by Marvel Corp), which passes it to Anthropic's Claude to get the answer (<a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">Anthropic's privacy policy</a>). The relay does not save your text. It keeps only a count of requests per day.</td></tr>
+    <tr><td>If you use 🧠 Brain dump with the AI helper on</td><td>Only the text you type into it</td><td>Our relay, which passes it to Anthropic's Claude to sort it. The relay does not save your text.</td></tr>
+    <tr><td>If you turn on backup</td><td>A copy of your Family Hub information (not photos or document pictures)</td><td>A hidden app folder in <b>your own</b> Google Drive. Only the Hub apps on your devices can read it. We cannot. Delete it any time in ⚙ → <b>Backup &amp; sync</b> → <b>Delete my Drive backup</b>.</td></tr>
+    <tr><td>If you connect Google Calendar</td><td>The app reads your calendar events to show them and adds the events you create to your calendar</td><td>Google, directly from your phone. The sign-in token is kept on your phone and expires after about an hour.</td></tr>
+    <tr><td>If you tap a phone number on the emergency card</td><td>Nothing from the app; your phone dials the number</td><td>Your phone's dialer</td></tr>
+    <tr><td>If you have Hub AI Credits or unlock a purchase</td><td>The email you bought with and your phone's random id</td><td>Our relay, which checks the purchase with Whop, the store that sold it, and keeps only scrambled (one-way) ids - never your email. We never see card details.</td></tr>
+    <tr><td>If you turn on reminders</td><td>Nothing. Reminders come from your phone itself.</td><td>No one</td></tr>
+    <tr><td>If your family turns on sharing between phones</td><td>What the "Sharing between phones" section below lists - never "Only me" items, Documents or the PIN</td><td>Your family's own space in Google Firebase, which only your invited phones can open</td></tr>
+  </table></div>
+
+  <h2>Sharing between phones</h2>
+  <p>Sharing is something the family's owner turns on (Share → Turn on sharing). Until then nothing is sent. Once it is on:</p>
+  <ul>
+    <li><b>Where it goes:</b> a family space in Google Firebase (Cloud Firestore, United States), in a project run by Marvel Corp. Only the phones your family invited can open it: each phone signs in with a random, anonymous id (no name, email or password). Kids never sign in; they use a parent's phone or the family tablet.</li>
+    <li><b>What is sent:</b> the family's name, members' first names, faces, colors and roles; the calendar, chores and check-offs, lists, the to-do board, meals and recipes, homework and pickups, pets, goals, the family tree, messages, reactions and announcements; and photos, at a smaller size. Each person's profile parts travel only as that person allows.</li>
+    <li><b>What is never sent:</b> anything marked "Only me", Documents, the parent PIN, who is using the phone, Grandparent Mode, and profile pictures.</li>
+    <li><b>Who sees what:</b> "Parents only" items, adults-only events and to-dos, the Parents conversation, allowance payments and the emergency card are kept in a part of the family space that a guest's phone (a sitter) cannot open. The emergency card reaches guests only if you allow it.</li>
+    <li><b>Invites:</b> a 10-character code made for one person, good once, for 2 days.</li>
+    <li><b>Leaving:</b> the owner can take any phone off the family, and anyone can stop sharing on their own phone. Their copy stays on their phone. The owner can link a Google account only to get the family back on a new phone; Google then knows only that you use Family Hub.</li>
+    <li>Firebase is run by Google (<a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase privacy</a>). We don't look at your family's information, sell it or use it for advertising. Firebase Analytics is not used.</li>
+  </ul>
+
+  <h2>Google user data</h2>
+  <p>Family Hub's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements. Google data is used only to provide the features you turned on, in the app, on your phone. It is not sold, not used for advertising, not used to train AI models, and no person at Marvel Corp reads it. To disconnect, use ⚙ Settings in Family Hub or remove the app at <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">myaccount.google.com/permissions</a>. The backup copy can be deleted from Google Drive → Settings → Manage apps.</p>
+
+  <h2>Selling data</h2>
+  <p>We do not sell or rent personal information. A family that shares between phones keeps its shared copy in Firebase for its own phones; we don't look at it.</p>
+
+  <h2>Changes</h2>
+  <p>If what Family Hub sends anywhere changes, this page changes first, and the date at the top changes with it.</p>
+
+  <h2>Contact</h2>
+  <p>Marvel Corp, <a href="mailto:smarvel1963@gmail.com">smarvel1963@gmail.com</a></p>
+  <p class="dim"><a href="./">← Back to Family Hub</a></p>
+</main></body>
+</html>

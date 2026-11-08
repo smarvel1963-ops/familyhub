@@ -1,0 +1,38 @@
+{
+  "id": "/familyhub/",
+  "name": "Family Hub",
+  "short_name": "Family Hub",
+  "description": "Family Hub by Marvel Corp - one family, one place, everything organized. A color-coded family calendar with repeating events, chores with parent OKs and allowances, shopping lists, a family to-do board, birthdays, an emergency card and Grandparent Mode. Kids are profiles a parent manages. No ads, ever.",
+  "lang": "en-US",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#170c2e",
+  "theme_color": "#170c2e",
+  "categories": [
+    "lifestyle",
+    "productivity",
+    "kids"
+  ],
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
