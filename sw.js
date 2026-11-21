@@ -8,10 +8,10 @@
  * caches (never another Hub's offline copy), reads its own copy first when offline, and never stores the update check.
  * Plus Family Hub's new files: family.css and the part files (v3: familysync.js). Art is cached the first time it is shown.
  * Firebase (sharing) is an outside service: always live, never cached here. */
-const CACHE = "familyhub-v3";
+const CACHE = "familyhub-v4";
 const SHELL = ["./", "index.html", "manifest.json", "icon-192.png", "icon-512.png", "icon-180.png",
   "../dayhub/styles.css", "../dayhub/family.css", "../dayhub/features.js", "../dayhub/app.js", "../dayhub/scenes.js", "../dayhub/cruise.js", "../dayhub/shell.js", "../dayhub/trip.js", "../dayhub/ships.js",
-  "../dayhub/family.js", "../dayhub/familymsg.js", "../dayhub/familytree.js", "../dayhub/familyphotos.js", "../dayhub/familylife.js", "../dayhub/familysync.js", "../dayhub/ui.js", "../dayhub/privacy.html", "../dayhub/terms.html"];
+  "../dayhub/family.js", "../dayhub/familymsg.js", "../dayhub/familytree.js", "../dayhub/familyphotos.js", "../dayhub/familylife.js", "../dayhub/familysync.js", "../dayhub/basics.js", "../dayhub/ui.js", "../dayhub/privacy.html", "../dayhub/terms.html"];
 self.addEventListener("install", e => {
   self.skipWaiting();
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)));
